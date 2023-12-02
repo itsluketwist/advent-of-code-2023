@@ -1,0 +1,22 @@
+name: check
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: install
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21.x'
+
+      - name: clean
+        run: make clean
+
+      - name: test
+        run: make test
