@@ -19,7 +19,7 @@ ifeq ($(shell expr $(d) \>= 10), 1)
 else ifeq ($(shell expr $(d) \>= 0), 1)
 	go test -v github.com/itsluketwist/advent-of-code-2023/day0$(n)
 else
-	go test -v ./...
+	go test ./...
 endif
 
 # format code
