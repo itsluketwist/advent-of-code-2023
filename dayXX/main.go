@@ -17,7 +17,7 @@ func main() {
 	fmt.Println("Running day", Day, "( part:", *part, ", try:", *try, ")")
 
 	exampleOne, _ := utils.ReadFileToArray(Day, "example1", false)
-	exampleTwo, _ := utils.ReadFileToArray(Day, "example2", false)
+	exampleTwo, _ := utils.ReadFileToArray(Day, "example1", false)
 	input, _ := utils.ReadFileToArray(Day, "input", false)
 
 	if *part == 0 || *part == 1 {

@@ -1,15 +1,16 @@
 package main
 
 import (
-	"github.com/itsluketwist/advent-of-code-2023/utils"
 	"testing"
+
+	"github.com/itsluketwist/advent-of-code-2023/utils"
 )
 
 var resultsMap = map[string]int{
-	"PartOneExample": 0,
-	"PartOneInput":   0,
-	"PartTwoExample": 0,
-	"PartTwoInput":   0,
+	"PartOneExample": 35,
+	"PartOneInput":   993500720,
+	"PartTwoExample": 46,
+	"PartTwoInput":   4917124,
 }
 
 func TestSolvePartOneExample(t *testing.T) {

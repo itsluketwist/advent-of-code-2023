@@ -6,10 +6,10 @@ import (
 )
 
 var resultsMap = map[string]int{
-	"PartOneExample": 0,
-	"PartOneInput":   0,
-	"PartTwoExample": 0,
-	"PartTwoInput":   0,
+	"PartOneExample": 13,
+	"PartOneInput":   20667,
+	"PartTwoExample": 30,
+	"PartTwoInput":   5833065,
 }
 
 func TestSolvePartOneExample(t *testing.T) {
