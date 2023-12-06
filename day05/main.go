@@ -114,7 +114,6 @@ func SolvePartTwo(data []string) int {
 
 	var seeds []int
 	for j := 0; j < len(initSeeds)/2; j++ {
-		fmt.Println(initSeeds[2*j], initSeeds[2*j+1])
 		for k := 0; k < initSeeds[2*j+1]; k++ {
 			seeds = append(seeds, initSeeds[2*j]+k)
 		}

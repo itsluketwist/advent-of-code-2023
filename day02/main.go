@@ -3,9 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/itsluketwist/advent-of-code-2023/utils"
 	"regexp"
 	"strconv"
+
+	"github.com/itsluketwist/advent-of-code-2023/utils"
 )
 
 const Day = 2

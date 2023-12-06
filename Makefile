@@ -15,9 +15,9 @@ endif
 # run tests
 test:
 ifeq ($(shell expr $(d) \>= 10), 1)
-	go test -v github.com/itsluketwist/advent-of-code-2023/day$(n)
+	go test -v github.com/itsluketwist/advent-of-code-2023/day$(d)
 else ifeq ($(shell expr $(d) \>= 0), 1)
-	go test -v github.com/itsluketwist/advent-of-code-2023/day0$(n)
+	go test -v github.com/itsluketwist/advent-of-code-2023/day0$(d)
 else
 	go test ./...
 endif

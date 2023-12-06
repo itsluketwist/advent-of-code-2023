@@ -4,11 +4,12 @@ import (
 	"flag"
 	"fmt"
 	"strconv"
+	"strings"
 
 	"github.com/itsluketwist/advent-of-code-2023/utils"
 )
 
-const Day = 0
+const Day = 6
 
 func main() {
 	part := flag.Int("part", 0, "Which parts to try?")
@@ -42,23 +43,55 @@ func main() {
 	}
 }
 
-func parseData(data []string) []int {
-	var numbers []int
-	for _, strNum := range data {
-		number, _ := strconv.Atoi(strNum)
-		numbers = append(numbers, int(number))
+func parseData(data []string) [][]int {
+	var times []int
+	for _, strNum := range strings.Split(data[0], " ") {
+		if number, err := strconv.Atoi(strNum); err == nil {
+			times = append(times, number)
+		}
 	}
-	return numbers
+
+	var dists []int
+	for _, strNum := range strings.Split(data[1], " ") {
+		if number, err := strconv.Atoi(strNum); err == nil {
+			dists = append(dists, number)
+		}
+	}
+
+	result := [][]int{times, dists}
+	return result
 }
 
 func SolvePartOne(data []string) int {
 	parsed := parseData(data)
 
-	return len(parsed)
+	final := 1
+	races := len(parsed[0])
+	for race := 0; race < races; race++ {
+		count := 0
+		for holdTime := 0; holdTime < parsed[0][race]; holdTime++ {
+			if (parsed[0][race]-holdTime)*holdTime > parsed[1][race] {
+				count++
+			}
+		}
+		final *= count
+	}
+
+	return final
 }
 
 func SolvePartTwo(data []string) int {
-	parsed := parseData(data)
+	timeLine := strings.Split(strings.ReplaceAll(data[0], " ", ""), ":")
+	time, _ := strconv.Atoi(timeLine[1])
+	distLine := strings.Split(strings.ReplaceAll(data[1], " ", ""), ":")
+	dist, _ := strconv.Atoi(distLine[1])
 
-	return len(parsed)
+	count := 0
+	for holdTime := 0; holdTime < time; holdTime++ {
+		if (time-holdTime)*holdTime > dist {
+			count++
+		}
+	}
+
+	return count
 }

@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/itsluketwist/advent-of-code-2023/utils"
 	"testing"
+
+	"github.com/itsluketwist/advent-of-code-2023/utils"
 )
 
 var resultsMap = map[string]int{

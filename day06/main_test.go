@@ -7,10 +7,10 @@ import (
 )
 
 var resultsMap = map[string]int{
-	"PartOneExample": 0,
-	"PartOneInput":   0,
-	"PartTwoExample": 0,
-	"PartTwoInput":   0,
+	"PartOneExample": 288,
+	"PartOneInput":   160816,
+	"PartTwoExample": 71503,
+	"PartTwoInput":   46561107,
 }
 
 func TestSolvePartOneExample(t *testing.T) {
