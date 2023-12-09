@@ -53,12 +53,14 @@ func parseData(data []string) []int {
 
 func SolvePartOne(data []string) int {
 	parsed := parseData(data)
+	fmt.Println(parsed)
 
-	return len(parsed)
+	return 0
 }
 
 func SolvePartTwo(data []string) int {
 	parsed := parseData(data)
+	fmt.Println(parsed)
 
-	return len(parsed)
+	return 0
 }
