@@ -52,15 +52,17 @@ func parseData(data []string) []int {
 }
 
 func SolvePartOne(data []string) int {
+	total := 0
 	parsed := parseData(data)
 	fmt.Println(parsed)
 
-	return 0
+	return total
 }
 
 func SolvePartTwo(data []string) int {
+	total := 0
 	parsed := parseData(data)
 	fmt.Println(parsed)
 
-	return 0
+	return total
 }

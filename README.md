@@ -17,6 +17,11 @@ Using Go version `go1.21.4`.
 </div>
 
 
+## *notable days*
+- [Day 8](day08/main.go) - GCD / LCM solution
+- [Day 10](day10/main.go) - uses Shoelace formula and Pick's theorem
+- [Day 12](day12/main.go) - dynamic programming example
+
 ## *install*
 
 Make sure you have go installed:
@@ -53,3 +58,8 @@ Format and lint the code with:
 make clean
 ```
 
+You can also create the template folder and code for day `x` using:
+
+```shell
+make new d=x
+```

@@ -33,3 +33,13 @@ lint:
 # do both!
 clean:
 	make format lint
+
+# create next day
+new:
+ifeq ($(shell expr $(d) \>= 10), 1)
+	mkdir day$(d)
+	cp -a dayXX/. day$(d)/
+else ifeq ($(shell expr $(d) \>= 0), 1)
+	mkdir day0$(d)
+	cp -a dayXX/. day0$(d)/
+endif
