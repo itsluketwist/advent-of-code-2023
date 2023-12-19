@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"math"
 	"slices"
 
 	"github.com/itsluketwist/advent-of-code-2023/utils"
@@ -159,20 +158,6 @@ func SolvePartTwo(data []string) int {
 		in = out
 	}
 
-	// Shoelace formula for polygonal area
-	// https://en.wikipedia.org/wiki/Shoelace_formula
-	total := 0
-	for x := 0; x < len(path); x++ {
-		tileA := path[x]
-		tileB := path[(x+1)%len(path)]
-
-		total += ((tileA[0] * tileB[1]) - (tileA[1] * tileB[0]))
-	}
-	A := int(math.Abs(float64(total))) / 2 // area
-
-	// Pick's theorem for points in polygon: A = i + b/2 - 1
-	// https://en.wikipedia.org/wiki/Pick%27s_theorem
-	b := len(path) // boundary points
-
-	return A - (b / 2) + 1 // = i (points inside)
+	// use Shoelace formula and Pick's theorem
+	return utils.PointsInside(path, false)
 }
