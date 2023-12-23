@@ -19,8 +19,9 @@ Using Go version `go1.21.4`.
 
 ## *notable days*
 - [Day 8](day08/main.go) - GCD / LCM solution
-- [Day 10](day10/main.go) - uses Shoelace formula and Pick's theorem
+- [Day 10](day10/main.go) / [Day 18](day18/main.go) - uses Shoelace formula and Pick's theorem
 - [Day 12](day12/main.go) - dynamic programming example
+- [Day 20](day20/main.go) - FIFO queue
 
 ## *install*
 
